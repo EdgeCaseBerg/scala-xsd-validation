@@ -1,0 +1,40 @@
+<xs:schema xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:element name="Forest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Tree" minOccurs='0' maxOccurs='unbounded'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Tree">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="State" minOccurs='0' maxOccurs='1'/>
+        <xs:element ref="Leaves" minOccurs='1' maxOccurs='1'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="TreeState" final="restriction" >
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="ALIVE" />
+        <xs:enumeration value="DEAD" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="State" type='TreeState'/>
+  <xs:element name="Leaves">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Leaf" minOccurs='0' maxOccurs='unbounded'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Leaf">
+    <xs:complexType>
+      <xs:attribute name="color" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

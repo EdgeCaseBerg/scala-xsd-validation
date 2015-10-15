@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Forest 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/EdgeCaseBerg/scala-xsd-validation/master/src/main/resources/tree.xsd"
+>
+	<Tree>
+		<State>ALIVE</State>		
+		<Leaves>
+			<Leaf color="Green"/>
+			<Leaf color="Yellow"/>
+		</Leaves>
+	</Tree>
+	<Tree>
+		<!-- No State Element, will have default -->
+		<Leaves>
+			<Leaf color="Brown"/>
+			<Leaf color="Grey"/>
+			<Leaf color="Gray"/>
+		</Leaves>
+	</Tree>
+</Forest>

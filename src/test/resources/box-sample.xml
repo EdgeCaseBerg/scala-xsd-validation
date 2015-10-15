@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Boxes 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/EdgeCaseBerg/scala-xsd-validation/master/src/main/resources/box.xsd"
+>
+	<Box>
+		<Id>0</Id>
+		<Name>First Box</Name>
+		<Contains>
+			<BoxedItem>Thing 1</BoxedItem>
+			<BoxedItem>Thing 2</BoxedItem>
+		</Contains>
+	</Box>
+	<Box>
+		<Id>2</Id>
+		<Name>Second Box</Name>
+		<Contains>
+			<BoxedItem>Second Thing 1</BoxedItem>
+			<BoxedItem>Second Thing 2</BoxedItem>
+		</Contains>
+	</Box>
+</Boxes>

@@ -1,0 +1,31 @@
+<xs:schema xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:element name="Boxes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Box" minOccurs='0' maxOccurs='unbounded'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Box">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Id" minOccurs='1' maxOccurs='1'/>
+        <xs:element ref="Name" minOccurs='1' maxOccurs='1'/>
+        <xs:element ref="Contains" minOccurs='1' maxOccurs='1'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Name" type='xs:string'/>
+  <xs:element name="Id" type='xs:integer'/>
+  <xs:element name="Contains">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="BoxedItem" minOccurs='0' maxOccurs='unbounded'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="BoxedItem" type='xs:string'/>
+</xs:schema>
