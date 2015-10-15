@@ -1,0 +1,31 @@
+<xs:schema xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:element name="TestInfoList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="TestInfo" minOccurs='0' maxOccurs='unbounded'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TestInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Id" minOccurs='1' maxOccurs='1'/>
+        <xs:element ref="Name" minOccurs='1' maxOccurs='1'/>
+        <xs:element ref="Days" minOccurs='1' maxOccurs='1'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Name" type='xs:string'/>
+  <xs:element name="Id" type='xs:integer'/>
+  <xs:element name="Days">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Day" minOccurs='0' maxOccurs='7'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Day" type='xs:string'/>
+</xs:schema>
